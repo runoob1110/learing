@@ -2,16 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jdbc_01" />
+        <module name="mybatis01" />
+        <module name="hibernate_01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="jdbc" target="8" />
-      <module name="jdbc_01" target="8" />
+      <module name="hibernate" target="1.8" />
+      <module name="hibernate_01" target="1.8" />
+      <module name="jdbc" target="1.8" />
+      <module name="jdbc_01" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="mybatis01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

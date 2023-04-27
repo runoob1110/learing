@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/hibernate/hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hibernate/hibernate_01/hibernate_01.iml" filepath="$PROJECT_DIR$/hibernate/hibernate_01/hibernate_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc.iml" filepath="$PROJECT_DIR$/jdbc/jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/jdbc/jdbc_01/jdbc_01.iml" filepath="$PROJECT_DIR$/jdbc/jdbc_01/jdbc_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learning.iml" filepath="$PROJECT_DIR$/.idea/learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/letcode/letcode.iml" filepath="$PROJECT_DIR$/letcode/letcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis01/mybatis01.iml" filepath="$PROJECT_DIR$/mybatis/mybatis01/mybatis01.iml" />
     </modules>
   </component>
 </project>
