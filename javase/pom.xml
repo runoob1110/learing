@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>socket-1</module>
+        <module>generics</module>
     </modules>
 
     <properties>
