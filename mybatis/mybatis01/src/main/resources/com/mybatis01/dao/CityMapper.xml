@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis01.dao.CityMapper">
+    <resultMap id="cityResultMap" type="City" >
+        <result property="name" column="name"/>
+        <result property="location" column="location"/>
+        <collection property="weathers" ofType="Weather">
+            <result property="city" column="city"/>
+            <result property="tempHi" column="temp_hi"/>
+            <result property="tempLo" column="temp_lo"/>
+            <result property="date" column="date"/>
+        </collection>
+    </resultMap>
+    <select id="selectCity" resultMap="cityResultMap">
+        SELECT * FROM weather JOIN cities ON city = name;
+    </select>
+</mapper>

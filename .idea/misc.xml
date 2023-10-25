@@ -20,6 +20,7 @@
       <set>
         <option value="$PROJECT_DIR$/geotools/geotools_1/pom.xml" />
         <option value="$PROJECT_DIR$/geotools/pom.xml" />
+        <option value="$PROJECT_DIR$/javase/jullog/pom.xml" />
       </set>
     </option>
   </component>

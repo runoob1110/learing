@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties>
+        <property name="driver" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://192.168.74.133:57432/mybatis"/>
+        <property name="username" value="postgres"/>
+        <property name="password" value="123456"/>
+    </properties>
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="Weather" type="com.mybatis01.model.Weather"/>
+        <typeAlias alias="City" type="com.mybatis01.model.City"/>
+    </typeAliases>
+<!--    <typeHandlers>-->
+<!--        <typeHandler handler="org.apache.ibatis.type.EnumTypeHandler"/>-->
+<!--    </typeHandlers>-->
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+<!--        <mapper resource="org/mybatis/example/BlogMapper.xml"/>-->
+        <mapper resource="com/mybatis01/dao/WeatherMapper.xml"/>
+        <mapper resource="com/mybatis01/dao/CityMapper.xml"/>
+    </mappers>
+</configuration>
