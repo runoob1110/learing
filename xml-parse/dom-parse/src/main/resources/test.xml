@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+    <Version>1.1</Version>
+    <Token>TJ1vDJVJuEgk8PcyfjM53A==</Token>
+    <From>
+        <Address>
+            <Sys>UTCS</Sys>
+            <SubSys/>
+            <Instance/>
+        </Address>
+    </From>
+    <To>
+        <Address>
+            <Sys>TICP</Sys>
+            <SubSys/>
+            <Instance/>
+        </Address>
+    </To>
+    <Type>RESPONSE</Type>
+    <Seq>20240329113714431195</Seq>
+    <Body>
+        <Operation order="1" name="Get">
+            <ScheduleParamExtend>
+                <CrossID>200250</CrossID>
+                <ScheduleNo>1</ScheduleNo>
+                <ScheduleList>
+                    <ScheduleType>1</ScheduleType>
+                    <Priority>7</Priority>
+                    <DailyPlanNo>1</DailyPlanNo>
+                    <Months>1,2,3,4,5,6,7,8,9,10,11,12</Months>
+                    <Days/>
+                    <Weeks>2,3,4</Weeks>
+                </ScheduleList>
+            </ScheduleParamExtend>
+        </Operation>
+    </Body>
+</Message>

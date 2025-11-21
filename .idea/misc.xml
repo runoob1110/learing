@@ -14,6 +14,15 @@
         <option value="$PROJECT_DIR$/javase/pom.xml" />
         <option value="$PROJECT_DIR$/graphqlforjava/pom.xml" />
         <option value="$PROJECT_DIR$/docker-secret/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
+        <option value="$PROJECT_DIR$/xml-parse/pom.xml" />
+        <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/jaxb/pom.xml" />
+        <option value="$PROJECT_DIR$/xstream/pom.xml" />
+        <option value="$PROJECT_DIR$/server/pom.xml" />
+        <option value="$PROJECT_DIR$/designer/pom.xml" />
+        <option value="$PROJECT_DIR$/httpserver/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

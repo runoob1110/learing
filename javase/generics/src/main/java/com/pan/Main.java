@@ -20,43 +20,55 @@ import java.util.stream.Stream;
  */
 public class Main {
     public static void main(String[] args) {
-        functionAndThenTest();
-        functionComposeTest();
-        predicateAndTest();
-        predicateOrTest();
-        consumerAndThenTest();
-        mathTest();
-        streamTest();
+//        functionAndThenTest();
+//        functionComposeTest();
+//        predicateAndTest();
+//        predicateOrTest();
+//        consumerAndThenTest();
+//        mathTest();
+//        streamTest();
+//        System.out.println(null instanceof Integer);
+//        Integer i = new Integer(1);
+//        System.out.println(i.equals(null));
+//        System.out.println(1 % 100);
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.currentTimeMillis() + 3000);
+        long t1 = System.currentTimeMillis() + 300;
+        long t2 = System.currentTimeMillis();
+        System.out.println((t2 - t1) / 1000);
+
     }
 
     private static void streamTest() {
         List<Student> students = new ArrayList<>();
-        students.add(new Student(2,"张三"));
-        students.add(new Student(1,"李四"));
-        students.add(new Student(4,"王五"));
+        students.add(new Student(3,"张三"));
+        students.add(new Student(4,"李四"));
+        students.add(new Student(5,"王五"));
         students.add(new Student(3,"赵六"));
-
-//        Map<Integer, String> collect = students.stream()
-////                .filter()
-////                .distinct()
-//                .collect(Collectors.toMap((student -> student.getId()), Student::getName, (oldValue, newValue) -> newValue));
-
-        List<Student> collect = students.stream().collect(Collectors.toList());
+        students.add(new Student(3,"赵六"));
+        students.add(new Student(6,"赵八"));
 
 
-//        System.out.printf("" +  new Student(1, "张三").equals(new Student(1, "张三")));
+        //1.先根据得到一个属于集合 姓名
+        List<Integer> uniqueList = students.stream().collect(Collectors.groupingBy(Student::getId, Collectors.counting()))
+                .entrySet().stream().filter(e -> e.getValue() > 1)
+                .map(Map.Entry::getKey).collect(Collectors.toList());
+        uniqueList.forEach(p -> System.out.println(p));
 
-//        Stream<String> stream = list.stream();
-//        Stream<String> distinct = stream.distinct();
-//        Map<String, Integer> collect = distinct.collect(Collectors.toMap(Function.identity(), String::length));
-//
-//
-//        "".contains("1");
-//        long count = distinct.count();
-//
-//        System.out.println(count);
+        //计算两个list中的重复值  3条数据
+        List<Student> reduce1 = students.stream().filter(item -> uniqueList.contains(item.getId())).collect(Collectors.toList());
+        System.out.println(reduce1);
 
-        System.out.println("");
+        // 求差集
+        List<Student> difference = students.stream().filter(userInfo ->
+                !reduce1.stream().map(Student::getId).collect(Collectors.toList()).contains(userInfo.getId())
+        ).collect(Collectors.toList());
+        System.out.println("A中B的补集：");
+        difference.forEach(System.out::println);
+
+
+
+
     }
 
     private static void mathTest() {

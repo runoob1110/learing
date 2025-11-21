@@ -1,0 +1,13 @@
+package com.learn.server;
+
+/**
+ * @author ：panleilei
+ * @description
+ * @modified By：
+ * @version:
+ * @date ：Created in 2024/11/6 15:16
+ */
+public interface MessageListener {
+    void onMessage(CommunicationMessage message);
+    void onError(CommunicationMessage message);
+}

@@ -13,7 +13,12 @@ public class Student {
     private Integer id;
     private String name;
 
+    public Student() {
+        System.out.println("无参构造");
+    }
+
     public Student(Integer id, String name) {
+        this();
         this.id = id;
         this.name = name;
     }
@@ -34,5 +39,12 @@ public class Student {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 
 }
